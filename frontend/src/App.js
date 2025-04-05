@@ -1,7 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  useEffect(() => {
+    fetch("http://localhost:8080/api/your-endpoint")
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch((err) => console.error("API error:", err));
+  }, []); // Empty dependency array = run only once when component mounts
+
   return (
     <div className="App">
       <header className="App-header">
