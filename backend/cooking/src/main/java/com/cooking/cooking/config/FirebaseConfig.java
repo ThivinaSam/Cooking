@@ -17,7 +17,7 @@ public class FirebaseConfig {
         FirebaseOptions options = FirebaseOptions.builder()
                 .setCredentials(GoogleCredentials.fromStream(
                         new ClassPathResource("serviceAccountKey.json").getInputStream()))
-                .setDatabaseUrl("https://YOUR-PROJECT-ID.firebaseio.com")
+                .setDatabaseUrl("https://cooking-e16cc.firebaseio.com")
                 .build();
 
         if (FirebaseApp.getApps().isEmpty()) {
